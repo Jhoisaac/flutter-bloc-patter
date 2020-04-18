@@ -51,6 +51,14 @@ class RestaurantFinder extends StatelessWidget {
           title: 'Restaurant Finder',
           theme: ThemeData(
             primarySwatch: Colors.red,
+            pageTransitionsTheme: PageTransitionsTheme(
+              builders: {
+                // TargetPlatform.android: FadeUpwardsPageTransitionsBuilder()
+                TargetPlatform.android: OpenUpwardsPageTransitionsBuilder()
+                // TargetPlatform.android: ZoomPageTransitionsBuilder()
+                // TargetPlatform.android: CupertinoPageTransitionsBuilder()
+              }
+            )
           ),
           home: MainScreen(),
         ),
