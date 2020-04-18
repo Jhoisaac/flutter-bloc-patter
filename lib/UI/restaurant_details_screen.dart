@@ -46,20 +46,19 @@ class RestaurantDetailsScreen extends StatelessWidget {
           _buildFavoriteButton(context),
           FlatButton.icon(
             onPressed: () {
-              Navigator.of(context).push(
+              /*Navigator.of(context).push(
                 PageRouteBuilder(
                   opaque: false,
-                  pageBuilder: ( BuildContext context, _, __ ) => 
-                      NextScreen()
-                )
-              );
-
-              /*Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) =>
-                      NextScreen()
+                  pageBuilder: (BuildContext context, _, __) => NextScreen()
                 )
               );*/
+
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  opaque: false,
+                  builder: (BuildContext context) => NextScreen()
+                )
+              );
             },
             textColor: Theme.of(context).accentColor,
             icon: Icon(Icons.arrow_forward),

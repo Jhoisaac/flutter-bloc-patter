@@ -27,7 +27,7 @@ class RestaurantTile extends StatelessWidget {
         print('26 RestaurantTile:StatelessWidget -> onTap() executed! ${context.hashCode}');
         print('27 RestaurantTile:StatelessWidget -> Navigator.push() entering to RestaurantDetailsScreen()');
         
-        Navigator.of(context).push(
+        /*Navigator.of(context).push(
           PageRouteBuilder(
             opaque: false,       
             pageBuilder: (BuildContext context, _, __) => RestaurantDetailsScreen(restaurant: restaurant),
@@ -46,15 +46,15 @@ class RestaurantTile extends StatelessWidget {
               );
             },
           )
-        );
+        );*/
 
-        /*Navigator.of(context).push(
+        Navigator.of(context).push(
           MaterialPageRoute(
             opaque: false,
             builder: (context) =>
                 RestaurantDetailsScreen(restaurant: restaurant)
           )
-        );*/
+        );
       },
     );
   }

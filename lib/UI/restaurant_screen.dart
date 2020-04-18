@@ -26,29 +26,31 @@ class RestaurantScreen extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.favorite_border),
             onPressed: () => Navigator.of(context)
-                .push(PageRouteBuilder(opaque: false, pageBuilder: (BuildContext context, _, __) => FavoriteScreen(),)),
+                /*.push(PageRouteBuilder(opaque: false, pageBuilder: (BuildContext context, _, __) => FavoriteScreen(),)),*/
+                .push(MaterialPageRoute(opaque: false, builder: (_) => FavoriteScreen(),)),
           )
         ],
       ),
       body: _buildSearch(context),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.edit_location),
-        /*onPressed: () => Navigator.of(context).push(
+        onPressed: () => Navigator.of(context).push(
           MaterialPageRoute(
+            opaque: false,
             builder: (context) => LocationScreen(
               // 1
               isFullScreenDialog: true,
             ),
             fullscreenDialog: true,
             /*maintainState: true,*/
-          )),*/
-        onPressed: () => Navigator.of(context).push(
+          )),
+          
+        /*onPressed: () => Navigator.of(context).push(
           PageRouteBuilder(
             opaque: false,
             fullscreenDialog: true,
-            pageBuilder: ( BuildContext context, _, __ ) => 
-                LocationScreen(isFullScreenDialog: true,)
-          )),
+            pageBuilder: ( BuildContext context, _, __ ) => LocationScreen(isFullScreenDialog: true,),
+          )),*/
       ),
     );
   }
